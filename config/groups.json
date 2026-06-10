@@ -1,0 +1,30 @@
+[
+  {
+    "nome": "Vermelho",
+    "cor": "bg-red-500 hover:bg-red-600",
+    "rota": "vermelho",
+    "emoji": "🟥",
+    "route": "rgYRMbBOxn"
+  },
+  {
+    "nome": "Azul",
+    "cor": "bg-blue-500 hover:bg-blue-600",
+    "rota": "azul",
+    "emoji": "🟦",
+    "route": "adcKiYHXBc"
+  },
+  {
+    "nome": "Verde",
+    "cor": "bg-green-500 hover:bg-green-600",
+    "rota": "verde",
+    "emoji": "🟩",
+    "route": "XNQVkKMQiH"
+  },
+  {
+    "nome": "Amarelo",
+    "cor": "bg-yellow-400 hover:bg-yellow-500 text-black",
+    "rota": "amarelo",
+    "emoji": "🟨",
+    "route": "vUnBbWqqnx"
+  }
+]
