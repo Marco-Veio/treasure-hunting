@@ -25,7 +25,7 @@ export default function OitavoDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">
+          <h1 className="text-5xl font-extrabold mb-3 text-green-500">
             🛣️ Desafio Rotas no Next.js
           </h1>
 
@@ -81,7 +81,7 @@ export default function OitavoDesafio() {
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/planta-entrada.jpeg")}
+                    onClick={() => abrirModal("/locais/pebolim.jpeg")}
                     className="
                       bg-green-600
                       hover:bg-green-700
@@ -93,12 +93,12 @@ export default function OitavoDesafio() {
                       cursor-pointer
                     "
                   >
-                    ⚛️ Criamos pasta com o nome da rota e dentro dela um arquivo
-                    page.tsx
+                    ⚛️ Criamos uma pasta com o nome da rota na pasta app e
+                    dentro dela um arquivo page.tsx
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/gaveta.jpeg")}
+                    onClick={() => abrirModal("/locais/buraco-tronco.jpeg")}
                     className="
                       bg-purple-600
                       hover:bg-purple-700
@@ -111,6 +111,14 @@ export default function OitavoDesafio() {
                     "
                   >
                     🌐 Definimos no arquivo layout.tsx
+                  </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/arvore-cachorro.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    🖥️ Criamos uma pasta com o nome da rota na raiz do projeto e
+                    dentro dela um arquivo page.tsx
                   </button>
                 </div>
               </div>
@@ -145,19 +153,7 @@ export default function OitavoDesafio() {
 
               <button
                 onClick={validarResposta}
-                className="
-                  w-full
-                  bg-white
-                  text-black
-                  hover:scale-[1.01]
-                  transition
-                  py-5
-                  rounded-2xl
-                  font-bold
-                  text-xl
-                  shadow-lg
-                  cursor-pointer
-                "
+                className="w-full bg-green-600 hover:bg-green-700 transition py-5 rounded-2xl font-bold text-xl shadow-lg cursor-pointer"
               >
                 Validar resposta
               </button>
@@ -217,7 +213,7 @@ export default function OitavoDesafio() {
                   px-3
                   py-2
                   text-sm
-                  font-bold
+                  
                   transition
                 "
               >

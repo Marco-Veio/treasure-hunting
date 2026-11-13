@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function BancoNaoSQLDesafio() {
+export default function PrismaDesafio() {
   const router = useRouter();
 
   const [resposta, setResposta] = useState("");
@@ -25,17 +25,19 @@ export default function BancoNaoSQLDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">
-            🗄️ Desafio de Banco de Dados
+          <h1 className="text-5xl font-extrabold mb-3 text-yellow-500">
+            🧩 Desafio do ORM
           </h1>
 
-          <p className="text-zinc-400 text-lg mb-10">O Mundo SQL vs NoSQL</p>
+          <p className="text-zinc-400 text-lg mb-10">
+            O Orquestrador do Banco de Dados
+          </p>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <Image
-                src="/images/sql.png"
-                alt="Banco de dados"
+                src="/images/orm.jpg"
+                alt="ORM"
                 width={420}
                 height={420}
                 className="rounded-2xl"
@@ -45,55 +47,62 @@ export default function BancoNaoSQLDesafio() {
             <div className="space-y-8">
               <div className="bg-zinc-800/60 rounded-2xl p-6 border border-zinc-700">
                 <p className="text-lg leading-relaxed text-zinc-200">
-                  Um sistema precisa armazenar dados flexíveis, onde cada
-                  registro pode ter campos diferentes.
+                  Em aplicações modernas com Node.js, precisamos acessar o banco
+                  de dados de forma simples, tipada e segura.
                 </p>
 
                 <ul className="mt-4 text-zinc-400 list-disc list-inside space-y-2">
-                  <li>Estrutura dinâmica</li>
-                  <li>Sem tabelas fixas</li>
-                  <li>Alta escalabilidade horizontal</li>
+                  <li>Facilita consultas ao banco</li>
+                  <li>Integra com TypeScript</li>
+                  <li>Substitui SQL direto em muitos casos</li>
                 </ul>
 
                 <p className="mt-5 text-zinc-400">
-                  Isso indica o uso de um banco NoSQL.
+                  Essa ferramenta é muito usada em APIs modernas.
                 </p>
               </div>
 
-              <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6">
+              <div className="bg-purple-500/10 border border-purple-500/30 rounded-2xl p-6">
                 <h2 className="text-2xl font-bold mb-3">Pergunta</h2>
 
                 <p className="text-lg text-zinc-200 leading-relaxed">
-                  Qual banco de dados abaixo NÃO segue o modelo relacional
-                  tradicional (tabelas e SQL)?
+                  Qual ferramenta usamos para facilitar a comunicação entre
+                  aplicação Node.js e banco de dados com tipagem segura?
                 </p>
               </div>
 
               <div>
                 <p className="text-sm uppercase tracking-wider text-zinc-500 mb-4">
-                  Bancos secretos
+                  Ferramentas de backend
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
                   <button
-                    onClick={() => abrirModal("/locais/gaveta.jpeg")}
+                    onClick={() => abrirModal("/locais/pedras-soltas.jpeg")}
                     className="bg-blue-600 hover:bg-blue-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
                   >
-                    MySQL
+                    MongoDB
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/telhas-banco.jpeg")}
+                    onClick={() => abrirModal("/locais/buraco-parede.jpeg")}
                     className="bg-green-600 hover:bg-green-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
                   >
-                    PostgreSQL
+                    Expo
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/pote.jpeg")}
+                    onClick={() => abrirModal("/locais/folhas-secas.jpeg")}
                     className="bg-purple-600 hover:bg-purple-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
                   >
-                    MongoDB
+                    Prisma
+                  </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/telha-sem-banco.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    SQLite
                   </button>
                 </div>
               </div>
@@ -110,13 +119,13 @@ export default function BancoNaoSQLDesafio() {
                     if (e.key === "Enter") validarResposta();
                   }}
                   placeholder="Digite aqui..."
-                  className="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-lg outline-none focus:border-emerald-500"
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-2xl p-5 text-lg outline-none focus:border-purple-500"
                 />
               </div>
 
               <button
                 onClick={validarResposta}
-                className="w-full bg-emerald-600 hover:bg-emerald-700 transition py-5 rounded-2xl font-bold text-xl shadow-lg cursor-pointer"
+                className="w-full bg-yellow-600 hover:bg-yellow-700 transition py-5 rounded-2xl text-xl shadow-lg cursor-pointer"
               >
                 Validar resposta
               </button>
@@ -133,7 +142,7 @@ export default function BancoNaoSQLDesafio() {
         {(revelar) => (
           <div className="text-white">
             <p className="text-sm text-zinc-300 mb-3">
-              Qual característica abaixo é típica de bancos NoSQL?
+              O que acontece quando executamos uma migration no Prisma?
             </p>
 
             <div className="grid grid-cols-2 gap-2">
@@ -141,28 +150,28 @@ export default function BancoNaoSQLDesafio() {
                 onClick={() => alert("❌")}
                 className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm cursor-pointer"
               >
-                Uso de JOINs complexos
-              </button>
-
-              <button
-                onClick={() => alert("❌")}
-                className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm cursor-pointer"
-              >
-                Estrutura rígida em tabelas
+                Apenas valida o schema
               </button>
 
               <button
                 onClick={revelar}
                 className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm font-bold cursor-pointer"
               >
-                Dados em formato JSON flexível
+                Altera a estrutura do banco de dados
               </button>
 
               <button
                 onClick={() => alert("❌")}
                 className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm cursor-pointer"
               >
-                Normalização obrigatória
+                Remove tabelas automaticamente
+              </button>
+
+              <button
+                onClick={() => alert("❌")}
+                className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm cursor-pointer"
+              >
+                Só atualiza o TypeScript
               </button>
             </div>
           </div>

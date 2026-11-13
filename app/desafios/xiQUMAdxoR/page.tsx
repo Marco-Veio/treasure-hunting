@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function SegundoDesafio() {
+export default function TerceiroDesafio() {
   const router = useRouter();
 
   const [resposta, setResposta] = useState("");
@@ -25,15 +25,19 @@ export default function SegundoDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">🔐 Desafio JWT</h1>
+          <h1 className="text-5xl font-extrabold mb-3 text-yellow-500">
+            🌐 Desafio Socket vs HTTP
+          </h1>
 
-          <p className="text-zinc-400 text-lg mb-10">O Segredo dos Tokens</p>
+          <p className="text-zinc-400 text-lg mb-10">
+            A Batalha da Comunicação
+          </p>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <Image
-                src="/images/jwt.png"
-                alt="JWT"
+                src="/images/socket-vs-http.png"
+                alt="Socket vs HTTP"
                 width={420}
                 height={420}
                 className="rounded-2xl"
@@ -43,37 +47,40 @@ export default function SegundoDesafio() {
             <div className="space-y-8">
               <div className="bg-zinc-800/60 rounded-2xl p-6 border border-zinc-700">
                 <p className="text-lg leading-relaxed text-zinc-200">
-                  Um JWT é um token usado em sistemas modernos e normalmente
-                  possui três partes:
+                  Dois sistemas precisam trocar mensagens:
                 </p>
 
-                <div className="mt-5 bg-black/40 rounded-xl p-4 font-mono text-sm overflow-auto">
-                  header.payload.signature
-                </div>
+                <ul className="list-disc list-inside text-zinc-400 mt-4 space-y-2">
+                  <li>
+                    Um envia mensagens apenas quando o usuário faz uma
+                    requisição
+                  </li>
+                  <li>O outro mantém uma conexão aberta em tempo real</li>
+                </ul>
 
                 <p className="mt-5 text-zinc-400">
-                  Esses tokens são muito comuns em APIs, aplicações web e
-                  sistemas de login.
+                  Um deles é muito usado em chats, jogos online e aplicações em
+                  tempo real.
                 </p>
               </div>
 
-              <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl p-6">
                 <h2 className="text-2xl font-bold mb-3">Pergunta</h2>
 
                 <p className="text-lg text-zinc-200 leading-relaxed">
-                  Para qual finalidade um JWT normalmente é utilizado em uma
-                  aplicação?
+                  Qual tecnologia normalmente utilizamos quando precisamos de
+                  comunicação em tempo real entre cliente e servidor?
                 </p>
               </div>
 
               <div>
                 <p className="text-sm uppercase tracking-wider text-zinc-500 mb-4">
-                  Tokens secretos
+                  Canais de comunicação
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
                   <button
-                    onClick={() => abrirModal("/locais/gaveta.jpeg")}
+                    onClick={() => abrirModal("/locais/bagulho-copos.jpeg")}
                     className="
                       bg-blue-600
                       hover:bg-blue-700
@@ -85,11 +92,11 @@ export default function SegundoDesafio() {
                       cursor-pointer
                     "
                   >
-                    🔑 Login
+                    📡 Comunicação Serial
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/livros.jpeg")}
+                    onClick={() => abrirModal("/locais/telhas.jpeg")}
                     className="
                       bg-green-600
                       hover:bg-green-700
@@ -101,11 +108,11 @@ export default function SegundoDesafio() {
                       cursor-pointer
                     "
                   >
-                    🛡️ Autenticação
+                    🔌 HTTP
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/arbusto-casa.jpeg")}
+                    onClick={() => abrirModal("/locais/pebolim.jpeg")}
                     className="
                       bg-purple-600
                       hover:bg-purple-700
@@ -117,7 +124,14 @@ export default function SegundoDesafio() {
                       cursor-pointer
                     "
                   >
-                    📜 Codificação
+                    🌐 Websocket
+                  </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/cerca.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    🖥️ I2C
                   </button>
                 </div>
               </div>
@@ -145,7 +159,7 @@ export default function SegundoDesafio() {
                     p-5
                     text-lg
                     outline-none
-                    focus:border-yellow-500
+                    focus:border-cyan-500
                   "
                 />
               </div>
@@ -159,7 +173,7 @@ export default function SegundoDesafio() {
                   transition
                   py-5
                   rounded-2xl
-                  font-bold
+                  
                   text-xl
                   shadow-lg
                   cursor-pointer
@@ -180,7 +194,8 @@ export default function SegundoDesafio() {
         {(revelar) => (
           <div className="text-white">
             <p className="text-sm text-zinc-300 mb-3">
-              Qual parte do JWT garante que o token não foi alterado?
+              Qual característica diferencia um WebSocket de uma requisição HTTP
+              tradicional?
             </p>
 
             <div className="grid grid-cols-2 gap-2">
@@ -197,7 +212,23 @@ export default function SegundoDesafio() {
                   cursor-pointer
                 "
               >
-                Header
+                Usa JSON
+              </button>
+
+              <button
+                onClick={() => alert("❌")}
+                className="
+                  bg-zinc-700
+                  hover:bg-zinc-600
+                  rounded-lg
+                  px-3
+                  py-2
+                  text-sm
+                  transition
+                  cursor-pointer
+                "
+              >
+                Funciona só no backend
               </button>
 
               <button
@@ -209,12 +240,12 @@ export default function SegundoDesafio() {
                   px-3
                   py-2
                   text-sm
-                  font-bold
+                  
                   transition
                   cursor-pointer
                 "
               >
-                Signature
+                Mantém conexão aberta em tempo real
               </button>
 
               <button
@@ -230,23 +261,7 @@ export default function SegundoDesafio() {
                   cursor-pointer
                 "
               >
-                Payload
-              </button>
-
-              <button
-                onClick={() => alert("❌")}
-                className="
-                  bg-zinc-700
-                  hover:bg-zinc-600
-                  rounded-lg
-                  px-3
-                  py-2
-                  text-sm
-                  transition
-                  cursor-pointer
-                "
-              >
-                Cookie
+                Não usa internet
               </button>
             </div>
           </div>

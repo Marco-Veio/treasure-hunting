@@ -25,7 +25,7 @@ export default function NpmDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">
+          <h1 className="text-5xl font-extrabold mb-3 text-red-500">
             📦 Desafio do gerenciador de pacotes
           </h1>
 
@@ -97,6 +97,13 @@ export default function NpmDesafio() {
                   >
                     NPM
                   </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/tapete.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    🖥️ Pylance
+                  </button>
                 </div>
               </div>
 
@@ -118,7 +125,7 @@ export default function NpmDesafio() {
 
               <button
                 onClick={validarResposta}
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-black transition py-5 rounded-2xl font-bold text-xl shadow-lg cursor-pointer"
+                className="w-full bg-red-600 hover:bg-red-700 transition py-5 rounded-2xl font-bold text-xl shadow-lg cursor-pointer"
               >
                 Validar resposta
               </button>
@@ -155,7 +162,7 @@ export default function NpmDesafio() {
 
               <button
                 onClick={revelar}
-                className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm font-bold cursor-pointer"
+                className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm cursor-pointer"
               >
                 npm install
               </button>

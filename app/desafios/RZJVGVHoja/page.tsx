@@ -25,7 +25,7 @@ export default function SetimoDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">
+          <h1 className="text-5xl font-extrabold mb-3 text-red-500">
             🌐 Desafio Código HTTP
           </h1>
 
@@ -90,7 +90,7 @@ export default function SetimoDesafio() {
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/telhas.jpeg")}
+                    onClick={() => abrirModal("/locais/quadro-energia.jpeg")}
                     className="
                       bg-green-600
                       hover:bg-green-700
@@ -106,7 +106,7 @@ export default function SetimoDesafio() {
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/telhas-banco.jpeg")}
+                    onClick={() => abrirModal("/locais/tronco-cogumelo.jpeg")}
                     className="
                       bg-purple-600
                       hover:bg-purple-700
@@ -119,6 +119,13 @@ export default function SetimoDesafio() {
                     "
                   >
                     🌍 201
+                  </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/moita-cerca.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    🖥️ 404
                   </button>
                 </div>
               </div>
@@ -155,12 +162,12 @@ export default function SetimoDesafio() {
                 onClick={validarResposta}
                 className="
                   w-full
-                  bg-orange-600
-                  hover:bg-orange-700
+                  bg-red-600
+                  hover:bg-red-700
                   transition
                   py-5
                   rounded-2xl
-                  font-bold
+                  
                   text-xl
                   shadow-lg
                   cursor-pointer
@@ -226,7 +233,7 @@ export default function SetimoDesafio() {
                   px-3
                   py-2
                   text-sm
-                  font-bold
+                  
                   transition
                   cursor-pointer
                 "

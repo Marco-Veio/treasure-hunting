@@ -25,7 +25,9 @@ export default function LogicaDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">🧠 Desafio de Lógica</h1>
+          <h1 className="text-5xl font-extrabold mb-3 text-green-500">
+            🧠 Desafio de Lógica
+          </h1>
 
           <p className="text-zinc-400 text-lg mb-10">O Enigma das Idades</p>
 
@@ -68,14 +70,16 @@ export default function LogicaDesafio() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <button
-                    onClick={() => abrirModal("/locais/planta-pote.jpeg")}
+                    onClick={() =>
+                      abrirModal("/locais/bagulho-atras-do-banco.jpeg")
+                    }
                     className="bg-blue-600 hover:bg-blue-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
                   >
                     6
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/apoio-pe.jpeg")}
+                    onClick={() => abrirModal("/locais/bagulho-papel.jpeg")}
                     className="bg-green-600 hover:bg-green-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
                   >
                     7
@@ -86,6 +90,13 @@ export default function LogicaDesafio() {
                     className="bg-purple-600 hover:bg-purple-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
                   >
                     9
+                  </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/tronco.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    10
                   </button>
                 </div>
               </div>
@@ -108,7 +119,7 @@ export default function LogicaDesafio() {
 
               <button
                 onClick={validarResposta}
-                className="w-full bg-cyan-600 hover:bg-cyan-700 transition py-5 rounded-2xl font-bold text-xl shadow-lg cursor-pointer"
+                className="w-full bg-green-600 hover:bg-green-700 transition py-5 rounded-2xl font-bold text-xl shadow-lg cursor-pointer"
               >
                 Validar resposta
               </button>
@@ -138,7 +149,7 @@ export default function LogicaDesafio() {
 
               <button
                 onClick={revelar}
-                className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm font-bold cursor-pointer"
+                className="bg-zinc-700 hover:bg-zinc-600 rounded-lg px-3 py-2 text-sm cursor-pointer"
               >
                 2, 2, 9
               </button>

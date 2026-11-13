@@ -25,7 +25,9 @@ export default function QuintoDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">⚛️ Desafio useEffect</h1>
+          <h1 className="text-5xl font-extrabold mb-3 text-blue-500">
+            ⚛️ Desafio useEffect
+          </h1>
 
           <p className="text-zinc-400 text-lg mb-10">O Mistério do useEffect</p>
 
@@ -74,7 +76,7 @@ useEffect(() => {
 
                 <div className="grid grid-cols-2 gap-4">
                   <button
-                    onClick={() => abrirModal("/locais/tronco.jpeg")}
+                    onClick={() => abrirModal("/locais/pebolim.jpeg")}
                     className="
                       bg-blue-600
                       hover:bg-blue-700
@@ -106,7 +108,7 @@ useEffect(() => {
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/muro-campo.jpeg")}
+                    onClick={() => abrirModal("/locais/lixo.jpeg")}
                     className="
                       bg-purple-600
                       hover:bg-purple-700
@@ -119,6 +121,13 @@ useEffect(() => {
                     "
                   >
                     🧠 O formato está incorreto
+                  </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/lixo-azul.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    🖥️ Não tem função
                   </button>
                 </div>
               </div>
@@ -160,7 +169,7 @@ useEffect(() => {
                   transition
                   py-5
                   rounded-2xl
-                  font-bold
+                  
                   text-xl
                   shadow-lg
                   cursor-pointer
@@ -210,7 +219,7 @@ useEffect(() => {
                   px-3
                   py-2
                   text-sm
-                  font-bold
+                  
                   transition
                   cursor-pointer
                 "

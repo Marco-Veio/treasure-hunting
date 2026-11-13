@@ -25,7 +25,9 @@ export default function SextoDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">📱 Aplicativo Móvel</h1>
+          <h1 className="text-5xl font-extrabold mb-3 text-yellow-500">
+            📱 Aplicativo Móvel
+          </h1>
 
           <p className="text-zinc-400 text-lg mb-10">O Aplicativo Perdido</p>
 
@@ -72,7 +74,7 @@ export default function SextoDesafio() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <button
-                    onClick={() => abrirModal("/locais/telhas-banco.jpeg")}
+                    onClick={() => abrirModal("/locais/moita-atras.jpeg")}
                     className="
                       bg-blue-600
                       hover:bg-blue-700
@@ -88,7 +90,7 @@ export default function SextoDesafio() {
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/tronco-buraco.jpeg")}
+                    onClick={() => abrirModal("/locais/mesa-ping-pong.jpeg")}
                     className="
                       bg-green-600
                       hover:bg-green-700
@@ -118,6 +120,22 @@ export default function SextoDesafio() {
                   >
                     🚀 React Native
                   </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/planta-entrada.jpeg")}
+                    className="
+                      bg-yellow-600
+                      hover:bg-yellow-700
+                      transition
+                      rounded-2xl
+                      p-5
+                      font-semibold
+                      text-lg
+                      cursor-pointer
+                    "
+                  >
+                    🖥️ Arduino
+                  </button>
                 </div>
               </div>
 
@@ -144,7 +162,7 @@ export default function SextoDesafio() {
                     p-5
                     text-lg
                     outline-none
-                    focus:border-indigo-500
+                    focus:border-yellow-500
                   "
                 />
               </div>
@@ -153,12 +171,12 @@ export default function SextoDesafio() {
                 onClick={validarResposta}
                 className="
                   w-full
-                  bg-indigo-600
-                  hover:bg-indigo-700
+                  bg-yellow-600
+                  hover:bg-yellow-700
                   transition
                   py-5
                   rounded-2xl
-                  font-bold
+                  
                   text-xl
                   shadow-lg
                   cursor-pointer
@@ -224,7 +242,7 @@ export default function SextoDesafio() {
                   px-3
                   py-2
                   text-sm
-                  font-bold
+                  
                   transition
                   cursor-pointer
                 "

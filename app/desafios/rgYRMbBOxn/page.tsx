@@ -4,15 +4,23 @@ import ImageModal from "@/components/ImageModal";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useTimer } from "@/hooks/timer";
 
 export default function PrimeiroDesafio() {
   const router = useRouter();
+  const { block, blocked } = useTimer();
 
   const [resposta, setResposta] = useState("");
   const [modalAberto, setModalAberto] = useState(false);
   const [imagemModal, setImagemModal] = useState("");
 
   function validarResposta() {
+    // if (blocked) {
+    //   alert("⏳ Você precisa esperar um pouco antes de enviar outra resposta!");
+    // } else {
+    //   block();
+    //   router.push(`/desafios/${resposta.trim()}`);
+    // }
     router.push(`/desafios/${resposta.trim()}`);
   }
 
@@ -25,7 +33,7 @@ export default function PrimeiroDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">
+          <h1 className="text-5xl font-extrabold mb-3 text-red-500">
             🧩 Desafio Torre de Hanoi
           </h1>
 
@@ -93,6 +101,13 @@ export default function PrimeiroDesafio() {
                     className="bg-purple-600 hover:bg-purple-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
                   >
                     🧠 7 Movimentos
+                  </button>
+
+                  <button
+                    onClick={() => abrirModal("/locais/cone.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    🖥️ 9 Movimentos
                   </button>
                 </div>
               </div>
@@ -166,7 +181,6 @@ export default function PrimeiroDesafio() {
             px-3
             py-2
             text-sm
-            font-bold
             transition
             cursor-pointer
           "

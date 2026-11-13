@@ -25,7 +25,7 @@ export default function QuartoDesafio() {
     <main className="min-h-screen bg-zinc-950 text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <div className="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-zinc-800">
-          <h1 className="text-5xl font-extrabold mb-3">🗄️ SQL</h1>
+          <h1 className="text-5xl font-extrabold mb-3 text-blue-500">🗄️ SQL</h1>
 
           <p className="text-zinc-400 text-lg mb-10">
             O Mistério do Banco de Dados
@@ -82,7 +82,7 @@ WHERE id = 2;`}</pre>
 
                 <div className="grid grid-cols-2 gap-4">
                   <button
-                    onClick={() => abrirModal("/locais/arbusto-casa.jpeg")}
+                    onClick={() => abrirModal("/locais/moita-cachorro.jpeg")}
                     className="
                       bg-blue-600
                       hover:bg-blue-700
@@ -98,7 +98,9 @@ WHERE id = 2;`}</pre>
                   </button>
 
                   <button
-                    onClick={() => abrirModal("/locais/caixas-componentes.jpeg")}
+                    onClick={() =>
+                      abrirModal("/locais/caixas-componentes.jpeg")
+                    }
                     className="
                       bg-green-600
                       hover:bg-green-700
@@ -127,6 +129,12 @@ WHERE id = 2;`}</pre>
                     "
                   >
                     📊 Carlos
+                  </button>
+                  <button
+                    onClick={() => abrirModal("/locais/banco.jpeg")}
+                    className="bg-yellow-600 hover:bg-yellow-700 transition rounded-2xl p-5 font-semibold text-lg cursor-pointer"
+                  >
+                    🖥️ Null
                   </button>
                 </div>
               </div>
@@ -163,12 +171,12 @@ WHERE id = 2;`}</pre>
                 onClick={validarResposta}
                 className="
                   w-full
-                  bg-emerald-600
-                  hover:bg-emerald-700
+                  bg-blue-600
+                  hover:bg-blue-700
                   transition
                   py-5
                   rounded-2xl
-                  font-bold
+                  
                   text-xl
                   shadow-lg
                   cursor-pointer
@@ -234,7 +242,7 @@ WHERE id = 2;`}</pre>
                   px-3
                   py-2
                   text-sm
-                  font-bold
+                  
                   transition
                   cursor-pointer
                 "
